@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: pbm_bronze
+    catalog: workspace
+    schema: ae_sam
+    tables:
+      - name: payers
+      - name: members
+      - name: providers
+      - name: drugs
+      - name: requests
+      - name: events

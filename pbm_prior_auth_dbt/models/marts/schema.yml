@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: fct_requests
+    description: >
+      Fact table representing prior authorization requests, including
+      member, provider, drug, payer, status, and turnaround metrics.
+    columns:
+      - name: request_id
+        description: Unique prior authorization request identifier
+        tests:
+          - not_null
+          - unique
+      - name: member_id
+        tests:
+          - not_null
+      - name: provider_id
+        tests:
+          - not_null
+      - name: drug_id
+        tests:
+          - not_null
+      - name: payer_id
+        tests:
+          - not_null
+      - name: status
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['approved', 'denied', 'pending']
+      - name: turnaround_days
+        description: Days between submission and final decision
+
+  - name: dim_members
+    columns:
+      - name: member_id
+        tests: [not_null, unique]
+
+  - name: dim_providers
+    columns:
+      - name: provider_id
+        tests: [not_null, unique]
+
+  - name: dim_drugs
+    columns:
+      - name: drug_id
+        tests: [not_null, unique]
+
+  - name: fct_events
+    description: "Event-level fact table for prior auth lifecycle events"
+    columns:
+      - name: event_sk
+        tests:
+          - not_null
+          - unique
+      - name: request_id
+        tests:
+          - not_null
+      - name: event_type
+        tests:
+          - not_null
+      - name: event_ts
+        tests:
+          - not_null
+  

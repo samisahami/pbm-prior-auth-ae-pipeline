@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_requests
+    columns:
+      - name: request_id
+        tests:
+          - not_null
+          - unique
+      - name: member_id
+        tests:
+          - not_null
+      - name: provider_id
+        tests:
+          - not_null
+      - name: drug_id
+        tests:
+          - not_null
+      - name: payer_id
+        tests:
+          - not_null
+      - name: request_ts
+        tests:
+          - not_null
+      - name: status
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['approved', 'denied', 'pending']
+
+  - name: stg_events
+    columns:
+      - name: request_id
+        tests:
+          - not_null
+      - name: event_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['submitted', 'approved', 'denied']
+      - name: event_ts
+        tests:
+          - not_null
