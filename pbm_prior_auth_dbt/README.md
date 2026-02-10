@@ -1,15 +1,34 @@
-Welcome to your new dbt project!
-
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
+\## 📊 Data Lineage (dbt)
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+\### fct\_requests
+
+!\[fct\_requests lineage](docs/lineage/lineage\_fct\_requests.png)
+
+
+
+\### fct\_events
+
+!\[fct\_events lineage](docs/lineage/lineage\_fct\_events.png)
+
+
+
+Lineage generated via `dbt docs`, showing transformation flow from bronze sources through staging into analytics-ready fact models.
+
+
+
+---
+
+
+
+\## dbt Project Notes
+
+
+
+This project was initialized using the dbt starter template and customized for a PBM prior authorization analytics pipeline.
+
+
+
+
+
