@@ -32,9 +32,11 @@ Below are screenshots and a walkthrough of the Databricks dashboard
 - Daily request volume trends to identify operational bottlenecks
 
 
-![Databricks Dashboard](dashboard/databricks_dashboard.png)
+![Databricks Dashboard](pbm_prior_auth_dbt/docs/dashboard/databricks_dashboard.png)
 
-https://dbc-ead16b1d-725e.cloud.databricks.com/dashboardsv3/01f106161bc91d72ab8588f835044891/published?o=7474655666586788&f_e8e705f4%7Epayer-id=_all_
+
+🔗 Databricks dashboard (workspace login required): [Open dashboard](https://dbc-ead16b1d-725e.cloud.databricks.com/dashboardsv3/01f106161bc91d72ab8588f835044891/published?o=7474655666586788&f_e8e705f4%7Epayer-id=_all)
+
 
 ##   Highlights
 - Bronze → staging → analytics-ready marts
