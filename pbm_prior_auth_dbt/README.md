@@ -1,32 +1,27 @@
-\## 📊 Data Lineage (dbt)
+# dbt Project (PBM Prior Auth)
 
+This folder contains the dbt project used to build the analytics-ready models for the PBM Prior Authorization pipeline.
 
-
-\### fct\_requests
-
-!\[fct\_requests lineage](docs/lineage/lineage\_fct\_requests.png)
-
-
-
-\### fct\_events
-
-!\[fct\_events lineage](docs/lineage/lineage\_fct\_events.png)
-
-
-
-Lineage generated via `dbt docs`, showing transformation flow from bronze sources through staging into analytics-ready fact models.
-
-
+👉 **Main project overview (start here):**  
+../../README.md
 
 ---
 
+## Lineage Graphs
 
+### fct_requests
+![fct_requests lineage](docs/lineage/lineage_fct_requests.png)
 
-\## dbt Project Notes
+### fct_events
+![fct_events lineage](docs/lineage/lineage_fct_events.png)
 
+---
 
+## How to View Lineage Locally
 
-This project was initialized using the dbt starter template and customized for a PBM prior authorization analytics pipeline.
+```bash
+dbt docs generate
+dbt docs serve --port 8089
 
 
 
