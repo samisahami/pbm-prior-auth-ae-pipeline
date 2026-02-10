@@ -25,7 +25,7 @@ Screenshots and walkthrough of the Databricks dashboard:
 
 👉 *(add dashboard images here next)*
 
-## 🚀 Highlights
+##   Highlights
 - Bronze → staging → analytics-ready marts
 - Fact / dimension modeling
 - SLA-focused metrics
