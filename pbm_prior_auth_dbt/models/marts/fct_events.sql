@@ -40,6 +40,8 @@ joined as (
         r.request_ts,
         r.member_age,
         
+        case when r.status = 'approved' then 1 else 0 end as is_approved,
+
         datediff(minute, r.request_ts, e.event_ts) as minutes_from_request_to_event
         
     from events e
